@@ -5,15 +5,15 @@
 
     <StackLayout BackgroundColor="Cornsilk">
         <Frame BackgroundColor="Cornsilk" Padding="24" CornerRadius="0">
-            <Label Text="CRITICOGRAFO" HorizontalTextAlignment="Center"  FontSize="36"/>
+            <Label Text="CRITICOGRAFO" HorizontalTextAlignment="Center"  FontSize="36" TextColor="Black"/>
         </Frame>
         <Label Text="Nombre:" TextColor="Black"/>
-        <Entry Placeholder="Alejandro" />
+        <Entry Placeholder="Alejandro" x:Name="NombreEntry" TextColor="Black" />
 
         <Label Text="Genero:" TextColor="Black"/>
         <StackLayout Orientation="Horizontal">
-            <RadioButton Content="Hombre" HorizontalOptions="CenterAndExpand"/>
-            <RadioButton Content="Mujer" HorizontalOptions="CenterAndExpand"/>
+            <RadioButton Content="Hombre" HorizontalOptions="CenterAndExpand" x:Name="RadioGeneroHombre" TextColor="Black"/>
+            <RadioButton Content="Mujer" HorizontalOptions="CenterAndExpand" x:Name="RadioGeneroMujer" TextColor="Black"/>
         </StackLayout>
 
         <Frame BackgroundColor="Cornsilk">
@@ -25,51 +25,64 @@
                           HorizontalOptions="Center"
                           VerticalOptions="CenterAndExpand"
                           Grid.Row="0"
-                          Grid.Column="0"/>
+                          Grid.Column="0"
+                          x:Name="Alto"/>
 
                 <Label Text="Feo"  Grid.Row="1" TextColor="Black"/>
                 <CheckBox IsChecked="False"
                           HorizontalOptions="Center"
                           VerticalOptions="CenterAndExpand"
                           Grid.Row="1"
-                          Grid.Column="0"/>
+                          Grid.Column="0"
+                          x:Name="Feo"/>
 
-                <Label Text="Alto"  Grid.Row="2" TextColor="Black"/>
+                <Label Text="Hermoso"  Grid.Row="2" TextColor="Black"/>
                 <CheckBox IsChecked="False"
                           HorizontalOptions="Center"
                           VerticalOptions="CenterAndExpand"
                           Grid.Row="2"
-                          Grid.Column="0"/>
+                          Grid.Column="0"
+                          x:Name="Hermoso"/>
 
                 <Label Text="Extravagante" Grid.Row="0" Grid.Column="1" TextColor="Black"/>
                 <CheckBox IsChecked="False"
                           HorizontalOptions="Center"
                           VerticalOptions="CenterAndExpand"
                          Grid.Row="0"
-                          Grid.Column="2"/>
+                          Grid.Column="2"
+                          x:Name="Extravagante"/>
 
                 <Label Text="Listo"  Grid.Row="1" Grid.Column="1" TextColor="Black"/>
                 <CheckBox IsChecked="False"
                           HorizontalOptions="Center"
                           VerticalOptions="CenterAndExpand"
                           Grid.Row="1"
-                          Grid.Column="2"/>
+                          Grid.Column="2"
+                          x:Name="Listo"/>
 
-                <Label Text="Alto"  Grid.Row="2" Grid.Column="1" TextColor="Black"/>
+                <Label Text="Guapo"  Grid.Row="2" Grid.Column="1" TextColor="Black"/>
                 <CheckBox IsChecked="False"
                           HorizontalOptions="Center"
                           VerticalOptions="CenterAndExpand"
                           Grid.Row="2"
                           Grid.Column="2"
-                         />
+                         x:Name="Guapo"
+                          />
             </Grid>
         </Frame>
 
-        <Button Text="CRITICAR" CornerRadius="10" BackgroundColor="Gray"/>
+        <Button Text="CRITICAR" CornerRadius="10" BackgroundColor="Gray" x:Name="Boton" Clicked="Boton_Clicked"/>
         
         <Frame BorderColor="Black" BackgroundColor="Transparent" CornerRadius="10">
-        <Editor VerticalOptions="FillAndExpand"/>
+
+            <Entry Text="Resultado"
+                IsReadOnly="true" 
+                   x:Name="entryResultado"
+                   TextColor="Black"/>
+
+
         </Frame>
+       
         
     </StackLayout>
 </ContentPage>
