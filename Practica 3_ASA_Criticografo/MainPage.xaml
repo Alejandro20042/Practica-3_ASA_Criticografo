@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica_3_ASA_Criticografo.MainPage">
+
+    <StackLayout BackgroundColor="Cornsilk">
+        <Frame BackgroundColor="Cornsilk" Padding="24" CornerRadius="0">
+            <Label Text="CRITICOGRAFO" HorizontalTextAlignment="Center"  FontSize="36"/>
+        </Frame>
+        <Label Text="Nombre:" TextColor="Black"/>
+        <Entry Placeholder="Alejandro" />
+
+        <Label Text="Genero:" TextColor="Black"/>
+        <StackLayout Orientation="Horizontal">
+            <RadioButton Content="Hombre" HorizontalOptions="CenterAndExpand"/>
+            <RadioButton Content="Mujer" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+
+        <Frame BackgroundColor="Cornsilk">
+            <Grid>
+
+
+                <Label Text="Alto" Grid.Row="0" TextColor="Black"/>
+                <CheckBox IsChecked="False"
+                          HorizontalOptions="Center"
+                          VerticalOptions="CenterAndExpand"
+                          Grid.Row="0"
+                          Grid.Column="0"/>
+
+                <Label Text="Feo"  Grid.Row="1" TextColor="Black"/>
+                <CheckBox IsChecked="False"
+                          HorizontalOptions="Center"
+                          VerticalOptions="CenterAndExpand"
+                          Grid.Row="1"
+                          Grid.Column="0"/>
+
+                <Label Text="Alto"  Grid.Row="2" TextColor="Black"/>
+                <CheckBox IsChecked="False"
+                          HorizontalOptions="Center"
+                          VerticalOptions="CenterAndExpand"
+                          Grid.Row="2"
+                          Grid.Column="0"/>
+
+                <Label Text="Extravagante" Grid.Row="0" Grid.Column="1" TextColor="Black"/>
+                <CheckBox IsChecked="False"
+                          HorizontalOptions="Center"
+                          VerticalOptions="CenterAndExpand"
+                         Grid.Row="0"
+                          Grid.Column="2"/>
+
+                <Label Text="Listo"  Grid.Row="1" Grid.Column="1" TextColor="Black"/>
+                <CheckBox IsChecked="False"
+                          HorizontalOptions="Center"
+                          VerticalOptions="CenterAndExpand"
+                          Grid.Row="1"
+                          Grid.Column="2"/>
+
+                <Label Text="Alto"  Grid.Row="2" Grid.Column="1" TextColor="Black"/>
+                <CheckBox IsChecked="False"
+                          HorizontalOptions="Center"
+                          VerticalOptions="CenterAndExpand"
+                          Grid.Row="2"
+                          Grid.Column="2"
+                         />
+            </Grid>
+        </Frame>
+
+        <Button Text="CRITICAR" CornerRadius="10" BackgroundColor="Gray"/>
+        
+        <Frame BorderColor="Black" BackgroundColor="Transparent" CornerRadius="10">
+        <Editor VerticalOptions="FillAndExpand"/>
+        </Frame>
+        
+    </StackLayout>
+</ContentPage>
