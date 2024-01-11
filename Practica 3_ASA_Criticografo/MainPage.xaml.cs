@@ -50,7 +50,7 @@ namespace Practica_3_ASA_Criticografo
                 }
                 if (Listo.IsChecked)
                 {
-                    caracteristicas += "Listo";
+                    caracteristicas += " Listo,";
                 }
             }
             else
@@ -80,14 +80,38 @@ namespace Practica_3_ASA_Criticografo
                 }
                 if (Extravagante.IsChecked)
                 {
-                    caracteristicas += " Extravagante, ";
+                    caracteristicas += " Extravagante,";
                 }
 
             }
 
-            string resultado = $"{nombre} es {genero}, es {caracteristicas}";
+            string resultado = $"{nombre} es {genero}, ";
+
+            if (!string.IsNullOrWhiteSpace(caracteristicas))
+            {
+                //LastIndexOf busca el ultimo caracter asignado
+                int ultimaComa = caracteristicas.TrimEnd(',').LastIndexOf(',');
+
+                if (ultimaComa >= 0)
+                {
+                    resultado += $"es {caracteristicas.Substring(0, ultimaComa)} y{caracteristicas.Substring(ultimaComa + 1)}";
+                }
+                else
+                {
+                    resultado += $"es {caracteristicas.TrimEnd(',')}";
+                }
+
+                resultado += ".";
+            }
+            else
+            {
+                resultado += "y.";
+            }
+
             entryResultado.Text = resultado;
 
         }
+
     }
+    
 }
