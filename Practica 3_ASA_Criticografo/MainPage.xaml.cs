@@ -93,7 +93,7 @@ namespace Practica_3_ASA_Criticografo
                 int ultimaComa = caracteristicas.TrimEnd(',').LastIndexOf(',');
 
                 if (ultimaComa >= 0)
-                {
+                {                                                                    //Cortar la cadena despues de la coma
                     resultado += $"es {caracteristicas.Substring(0, ultimaComa)} y{caracteristicas.Substring(ultimaComa + 1)}";
                 }
                 else
